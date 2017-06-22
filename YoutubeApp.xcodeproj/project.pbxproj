@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC21CC131EFBD74A00BA8558 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC121EFBD74A00BA8558 /* main.m */; };
+		DC21CC161EFBD74A00BA8558 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC151EFBD74A00BA8558 /* AppDelegate.m */; };
+		DC21CC191EFBD74A00BA8558 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC181EFBD74A00BA8558 /* ViewController.m */; };
+		DC21CC1C1EFBD74A00BA8558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC21CC1A1EFBD74A00BA8558 /* Main.storyboard */; };
+		DC21CC1E1EFBD74A00BA8558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC21CC1D1EFBD74A00BA8558 /* Assets.xcassets */; };
+		DC21CC211EFBD74A00BA8558 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC21CC1F1EFBD74A00BA8558 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DC21CC0E1EFBD74A00BA8558 /* YoutubeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC21CC121EFBD74A00BA8558 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC21CC141EFBD74A00BA8558 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DC21CC151EFBD74A00BA8558 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DC21CC171EFBD74A00BA8558 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DC21CC181EFBD74A00BA8558 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DC21CC1B1EFBD74A00BA8558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC21CC1D1EFBD74A00BA8558 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC21CC201EFBD74A00BA8558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC21CC221EFBD74A00BA8558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC21CC0B1EFBD74900BA8558 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC21CC051EFBD74900BA8558 = {
+			isa = PBXGroup;
+			children = (
+				DC21CC101EFBD74A00BA8558 /* YoutubeApp */,
+				DC21CC0F1EFBD74A00BA8558 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC21CC0F1EFBD74A00BA8558 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC21CC0E1EFBD74A00BA8558 /* YoutubeApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC21CC101EFBD74A00BA8558 /* YoutubeApp */ = {
+			isa = PBXGroup;
+			children = (
+				DC21CC141EFBD74A00BA8558 /* AppDelegate.h */,
+				DC21CC151EFBD74A00BA8558 /* AppDelegate.m */,
+				DC21CC171EFBD74A00BA8558 /* ViewController.h */,
+				DC21CC181EFBD74A00BA8558 /* ViewController.m */,
+				DC21CC1A1EFBD74A00BA8558 /* Main.storyboard */,
+				DC21CC1D1EFBD74A00BA8558 /* Assets.xcassets */,
+				DC21CC1F1EFBD74A00BA8558 /* LaunchScreen.storyboard */,
+				DC21CC221EFBD74A00BA8558 /* Info.plist */,
+				DC21CC111EFBD74A00BA8558 /* Supporting Files */,
+			);
+			path = YoutubeApp;
+			sourceTree = "<group>";
+		};
+		DC21CC111EFBD74A00BA8558 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC21CC121EFBD74A00BA8558 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC21CC0D1EFBD74900BA8558 /* YoutubeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC21CC251EFBD74A00BA8558 /* Build configuration list for PBXNativeTarget "YoutubeApp" */;
+			buildPhases = (
+				DC21CC0A1EFBD74900BA8558 /* Sources */,
+				DC21CC0B1EFBD74900BA8558 /* Frameworks */,
+				DC21CC0C1EFBD74900BA8558 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YoutubeApp;
+			productName = YoutubeApp;
+			productReference = DC21CC0E1EFBD74A00BA8558 /* YoutubeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC21CC061EFBD74900BA8558 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Syngmaster;
+				TargetAttributes = {
+					DC21CC0D1EFBD74900BA8558 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 4PMQKT6K8N;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DC21CC091EFBD74900BA8558 /* Build configuration list for PBXProject "YoutubeApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC21CC051EFBD74900BA8558;
+			productRefGroup = DC21CC0F1EFBD74A00BA8558 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC21CC0D1EFBD74900BA8558 /* YoutubeApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC21CC0C1EFBD74900BA8558 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC21CC211EFBD74A00BA8558 /* LaunchScreen.storyboard in Resources */,
+				DC21CC1E1EFBD74A00BA8558 /* Assets.xcassets in Resources */,
+				DC21CC1C1EFBD74A00BA8558 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC21CC0A1EFBD74900BA8558 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC21CC191EFBD74A00BA8558 /* ViewController.m in Sources */,
+				DC21CC161EFBD74A00BA8558 /* AppDelegate.m in Sources */,
+				DC21CC131EFBD74A00BA8558 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DC21CC1A1EFBD74A00BA8558 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC21CC1B1EFBD74A00BA8558 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC21CC1F1EFBD74A00BA8558 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC21CC201EFBD74A00BA8558 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC21CC231EFBD74A00BA8558 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC21CC241EFBD74A00BA8558 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC21CC261EFBD74A00BA8558 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4PMQKT6K8N;
+				INFOPLIST_FILE = YoutubeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.YoutubeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC21CC271EFBD74A00BA8558 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4PMQKT6K8N;
+				INFOPLIST_FILE = YoutubeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ios.YoutubeApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC21CC091EFBD74900BA8558 /* Build configuration list for PBXProject "YoutubeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC21CC231EFBD74A00BA8558 /* Debug */,
+				DC21CC241EFBD74A00BA8558 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC21CC251EFBD74A00BA8558 /* Build configuration list for PBXNativeTarget "YoutubeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC21CC261EFBD74A00BA8558 /* Debug */,
+				DC21CC271EFBD74A00BA8558 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC21CC061EFBD74900BA8558 /* Project object */;
+}
