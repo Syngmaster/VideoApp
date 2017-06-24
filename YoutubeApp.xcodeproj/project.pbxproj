@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		DC21CC131EFBD74A00BA8558 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC121EFBD74A00BA8558 /* main.m */; };
 		DC21CC161EFBD74A00BA8558 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC151EFBD74A00BA8558 /* AppDelegate.m */; };
-		DC21CC191EFBD74A00BA8558 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC181EFBD74A00BA8558 /* ViewController.m */; };
+		DC21CC191EFBD74A00BA8558 /* SMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC181EFBD74A00BA8558 /* SMViewController.m */; };
 		DC21CC1C1EFBD74A00BA8558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC21CC1A1EFBD74A00BA8558 /* Main.storyboard */; };
 		DC21CC1E1EFBD74A00BA8558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC21CC1D1EFBD74A00BA8558 /* Assets.xcassets */; };
 		DC21CC211EFBD74A00BA8558 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC21CC1F1EFBD74A00BA8558 /* LaunchScreen.storyboard */; };
+		DC21CC2B1EFBD77200BA8558 /* SMDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC2A1EFBD77200BA8558 /* SMDataService.m */; };
+		DC21CC2F1EFBE09500BA8558 /* SMVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC2E1EFBE09500BA8558 /* SMVideoCell.m */; };
+		DC21CC321EFBE36A00BA8558 /* SMVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC311EFBE36A00BA8558 /* SMVideoModel.m */; };
+		DC21CC361EFBEFCB00BA8558 /* SMDetailVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC351EFBEFCB00BA8558 /* SMDetailVideoController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +24,20 @@
 		DC21CC121EFBD74A00BA8558 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DC21CC141EFBD74A00BA8558 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DC21CC151EFBD74A00BA8558 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DC21CC171EFBD74A00BA8558 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DC21CC181EFBD74A00BA8558 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DC21CC171EFBD74A00BA8558 /* SMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMViewController.h; sourceTree = "<group>"; };
+		DC21CC181EFBD74A00BA8558 /* SMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMViewController.m; sourceTree = "<group>"; };
 		DC21CC1B1EFBD74A00BA8558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC21CC1D1EFBD74A00BA8558 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC21CC201EFBD74A00BA8558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC21CC221EFBD74A00BA8558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC21CC291EFBD77200BA8558 /* SMDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMDataService.h; sourceTree = "<group>"; };
+		DC21CC2A1EFBD77200BA8558 /* SMDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMDataService.m; sourceTree = "<group>"; };
+		DC21CC2D1EFBE09500BA8558 /* SMVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMVideoCell.h; sourceTree = "<group>"; };
+		DC21CC2E1EFBE09500BA8558 /* SMVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMVideoCell.m; sourceTree = "<group>"; };
+		DC21CC301EFBE36A00BA8558 /* SMVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMVideoModel.h; sourceTree = "<group>"; };
+		DC21CC311EFBE36A00BA8558 /* SMVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMVideoModel.m; sourceTree = "<group>"; };
+		DC21CC341EFBEFCB00BA8558 /* SMDetailVideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMDetailVideoController.h; sourceTree = "<group>"; };
+		DC21CC351EFBEFCB00BA8558 /* SMDetailVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMDetailVideoController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +70,11 @@
 		DC21CC101EFBD74A00BA8558 /* YoutubeApp */ = {
 			isa = PBXGroup;
 			children = (
+				DC21CC331EFBEFA800BA8558 /* Controller */,
+				DC21CC2C1EFBE07D00BA8558 /* View */,
+				DC21CC281EFBD75700BA8558 /* Model */,
 				DC21CC141EFBD74A00BA8558 /* AppDelegate.h */,
 				DC21CC151EFBD74A00BA8558 /* AppDelegate.m */,
-				DC21CC171EFBD74A00BA8558 /* ViewController.h */,
-				DC21CC181EFBD74A00BA8558 /* ViewController.m */,
 				DC21CC1A1EFBD74A00BA8558 /* Main.storyboard */,
 				DC21CC1D1EFBD74A00BA8558 /* Assets.xcassets */,
 				DC21CC1F1EFBD74A00BA8558 /* LaunchScreen.storyboard */,
@@ -77,6 +90,37 @@
 				DC21CC121EFBD74A00BA8558 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC21CC281EFBD75700BA8558 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC21CC291EFBD77200BA8558 /* SMDataService.h */,
+				DC21CC2A1EFBD77200BA8558 /* SMDataService.m */,
+				DC21CC301EFBE36A00BA8558 /* SMVideoModel.h */,
+				DC21CC311EFBE36A00BA8558 /* SMVideoModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DC21CC2C1EFBE07D00BA8558 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC21CC2D1EFBE09500BA8558 /* SMVideoCell.h */,
+				DC21CC2E1EFBE09500BA8558 /* SMVideoCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DC21CC331EFBEFA800BA8558 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DC21CC171EFBD74A00BA8558 /* SMViewController.h */,
+				DC21CC181EFBD74A00BA8558 /* SMViewController.m */,
+				DC21CC341EFBEFCB00BA8558 /* SMDetailVideoController.h */,
+				DC21CC351EFBEFCB00BA8558 /* SMDetailVideoController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC21CC191EFBD74A00BA8558 /* ViewController.m in Sources */,
+				DC21CC361EFBEFCB00BA8558 /* SMDetailVideoController.m in Sources */,
+				DC21CC191EFBD74A00BA8558 /* SMViewController.m in Sources */,
+				DC21CC2B1EFBD77200BA8558 /* SMDataService.m in Sources */,
 				DC21CC161EFBD74A00BA8558 /* AppDelegate.m in Sources */,
+				DC21CC321EFBE36A00BA8558 /* SMVideoModel.m in Sources */,
 				DC21CC131EFBD74A00BA8558 /* main.m in Sources */,
+				DC21CC2F1EFBE09500BA8558 /* SMVideoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +360,7 @@
 				DC21CC271EFBD74A00BA8558 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
