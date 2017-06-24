@@ -17,6 +17,8 @@
 		DC21CC2F1EFBE09500BA8558 /* SMVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC2E1EFBE09500BA8558 /* SMVideoCell.m */; };
 		DC21CC321EFBE36A00BA8558 /* SMVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC311EFBE36A00BA8558 /* SMVideoModel.m */; };
 		DC21CC361EFBEFCB00BA8558 /* SMDetailVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC351EFBEFCB00BA8558 /* SMDetailVideoController.m */; };
+		DC21CC391EFEE85400BA8558 /* SMCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC381EFEE85400BA8558 /* SMCommentCell.m */; };
+		DC21CC3C1EFEEE8A00BA8558 /* SMCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC3B1EFEEE8A00BA8558 /* SMCustomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		DC21CC311EFBE36A00BA8558 /* SMVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMVideoModel.m; sourceTree = "<group>"; };
 		DC21CC341EFBEFCB00BA8558 /* SMDetailVideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMDetailVideoController.h; sourceTree = "<group>"; };
 		DC21CC351EFBEFCB00BA8558 /* SMDetailVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMDetailVideoController.m; sourceTree = "<group>"; };
+		DC21CC371EFEE85400BA8558 /* SMCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCommentCell.h; sourceTree = "<group>"; };
+		DC21CC381EFEE85400BA8558 /* SMCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCommentCell.m; sourceTree = "<group>"; };
+		DC21CC3A1EFEEE8A00BA8558 /* SMCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCustomView.h; sourceTree = "<group>"; };
+		DC21CC3B1EFEEE8A00BA8558 /* SMCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCustomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,10 @@
 			children = (
 				DC21CC2D1EFBE09500BA8558 /* SMVideoCell.h */,
 				DC21CC2E1EFBE09500BA8558 /* SMVideoCell.m */,
+				DC21CC371EFEE85400BA8558 /* SMCommentCell.h */,
+				DC21CC381EFEE85400BA8558 /* SMCommentCell.m */,
+				DC21CC3A1EFEEE8A00BA8558 /* SMCustomView.h */,
+				DC21CC3B1EFEEE8A00BA8558 /* SMCustomView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -200,6 +210,8 @@
 				DC21CC2B1EFBD77200BA8558 /* SMDataService.m in Sources */,
 				DC21CC161EFBD74A00BA8558 /* AppDelegate.m in Sources */,
 				DC21CC321EFBE36A00BA8558 /* SMVideoModel.m in Sources */,
+				DC21CC391EFEE85400BA8558 /* SMCommentCell.m in Sources */,
+				DC21CC3C1EFEEE8A00BA8558 /* SMCustomView.m in Sources */,
 				DC21CC131EFBD74A00BA8558 /* main.m in Sources */,
 				DC21CC2F1EFBE09500BA8558 /* SMVideoCell.m in Sources */,
 			);
