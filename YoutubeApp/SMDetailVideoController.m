@@ -8,8 +8,13 @@
 
 #import "SMDetailVideoController.h"
 #import "SMVideoModel.h"
+#import "SMCommentCell.h"
 
-@interface SMDetailVideoController () <UIWebViewDelegate>
+@interface SMDetailVideoController () <UIWebViewDelegate, UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) NSArray *testUsername;
+@property (strong, nonatomic) NSArray *testComment;
+
 
 @end
 
@@ -22,6 +27,11 @@
     self.titleLabel.text = self.video.videoTitle;
     self.descriptionLabel.text = self.video.videoDescription;
     [self.webView loadHTMLString:self.video.videoIFrame baseURL:nil];
+    
+    self.commentsTableView.dataSource = self;
+    
+    self.testUsername = @[@"Alex",@"Max",@"Jane", @"Bob"];
+    self.testComment = @[@"Great job! Great job! Great job! Great job! Great job! Great job! Great job! Great job! Great job!",@"Awesome!!",@"I enjoyed that",@"Cool stuff!!"];
 
 }
 
@@ -47,5 +57,23 @@
     [self.webView stringByEvaluatingJavaScriptFromString:js];
 }
 
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.testUsername count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    SMCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentCell"];
+    
+    if (!cell) {
+        cell = [[SMCommentCell alloc] init];
+    }
+    
+    cell.commentLabel.text = [self.testComment objectAtIndex:indexPath.row];
+    cell.usernameLabel.text = [self.testUsername objectAtIndex:indexPath.row];
+    
+    return cell;
+}
 
 @end
