@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         
+        self.videoID = [dataDict objectForKey:@"id"];
         self.videoTitle = [dataDict objectForKey:@"title"];
         self.videoDescription = [dataDict objectForKey:@"description"];
         self.videothumbnailURL = [dataDict objectForKey:@"thumbnail"];

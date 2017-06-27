@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class SMVideoModel;
+
 typedef void (^onComplete)(NSArray *dataArray, NSString *errorMessage);
 
 @interface SMDataService : NSObject
@@ -15,5 +17,6 @@ typedef void (^onComplete)(NSArray *dataArray, NSString *errorMessage);
 + (SMDataService *) sharedInstance;
 - (void) getVideos:(onComplete) completionHandler;
 - (void)postComment;
+- (void)getAllCommentsOfVideo:(SMVideoModel *) video onComplete:(onComplete) completionHandler;
 
 @end

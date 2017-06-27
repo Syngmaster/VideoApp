@@ -9,11 +9,14 @@
 #import "SMDetailVideoController.h"
 #import "SMVideoModel.h"
 #import "SMCommentCell.h"
+#import "SMDataService.h"
+#import "SMCommentModel.h"
 
 @interface SMDetailVideoController () <UIWebViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSArray *testUsername;
 @property (strong, nonatomic) NSArray *testComment;
+@property (strong, nonatomic) NSArray *commentsList;
 
 
 @end
@@ -30,9 +33,28 @@
     
     self.commentsTableView.dataSource = self;
     
-    self.testUsername = @[@"Alex",@"Max",@"Jane", @"Bob"];
-    self.testComment = @[@"Great job! Great job! Great job! Great job! Great job! Great job! Great job! Great job! Great job!",@"Awesome!!",@"I enjoyed that",@"Cool stuff!!"];
+    //self.testUsername = @[@"Alex",@"Max",@"Jane", @"Bob"];
+    //self.testComment = @[@"Great job! Great job! Great job! Great job! Great job! Great job! Great job! Great job! Great job!",@"Awesome!!",@"I enjoyed that",@"Cool stuff!!"];
+    
+    [[SMDataService sharedInstance] getAllCommentsOfVideo:self.video onComplete:^(NSArray *dataArray, NSString *errorMessage) {
+        
+        if (dataArray) {
+            
+            self.commentsList = dataArray;
+            [self updateTableData];
+            
+        } else {
+            
+        }
 
+    }];
+
+}
+
+- (void)updateTableData {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.commentsTableView reloadData];
+    });
 }
 
 - (IBAction)doneAction:(UIButton *)sender {
@@ -60,7 +82,7 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.testUsername count];
+    return [self.commentsList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -70,8 +92,9 @@
         cell = [[SMCommentCell alloc] init];
     }
     
-    cell.commentLabel.text = [self.testComment objectAtIndex:indexPath.row];
-    cell.usernameLabel.text = [self.testUsername objectAtIndex:indexPath.row];
+    SMCommentModel *comment = [self.commentsList objectAtIndex:indexPath.row];
+    
+    [cell configureCell:comment];
     
     return cell;
 }

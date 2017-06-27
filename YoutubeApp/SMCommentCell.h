@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class SMCommentModel;
+
 @interface SMCommentCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIView *cellView;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+
+- (void)configureCell:(SMCommentModel *) comment;
 
 @end
