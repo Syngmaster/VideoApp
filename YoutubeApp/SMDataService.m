@@ -112,7 +112,7 @@
     NSError *error;
     
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:6361/video.postComment%@", video.videoID]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:6361/video.postComment=%@", video.videoID]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
