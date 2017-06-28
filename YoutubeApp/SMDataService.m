@@ -107,14 +107,12 @@
     
 }
 
-- (void)postComment {
-    
-    NSDictionary *comment = @{@"username": @"Syngmaster", @"comment": @"Thanks very much for that!"};
+- (void)postComment:(NSDictionary *) comment toVideo:(SMVideoModel *) video onComplete:(dataPosted) completionHandler {
     
     NSError *error;
     
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURL *url = [NSURL URLWithString:@"http://localhost:6361/videos"];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:6361/video.postComment%@", video.videoID]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
@@ -126,7 +124,9 @@
     [request setHTTPBody:postData];
     
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        //handling errors
+
+        completionHandler();
+
     }];
     
     [postDataTask resume];

@@ -12,7 +12,7 @@
 #import "SMDataService.h"
 #import "SMCommentModel.h"
 
-@interface SMDetailVideoController () <UIWebViewDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface SMDetailVideoController () <UIWebViewDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
 @property (strong, nonatomic) NSArray *testUsername;
 @property (strong, nonatomic) NSArray *testComment;
@@ -32,10 +32,16 @@
     [self.webView loadHTMLString:self.video.videoIFrame baseURL:nil];
     
     self.commentsTableView.dataSource = self;
+    self.usernameTextField.delegate = self;
+    self.commentBodyTextField.delegate = self;
     
-    //self.testUsername = @[@"Alex",@"Max",@"Jane", @"Bob"];
-    //self.testComment = @[@"Great job! Great job! Great job! Great job! Great job! Great job! Great job! Great job! Great job!",@"Awesome!!",@"I enjoyed that",@"Cool stuff!!"];
+    [self getAllComments];
     
+    NSLog(@"%@",self.video.videoID);
+
+}
+
+- (void)getAllComments {
     [[SMDataService sharedInstance] getAllCommentsOfVideo:self.video onComplete:^(NSArray *dataArray, NSString *errorMessage) {
         
         if (dataArray) {
@@ -46,15 +52,27 @@
         } else {
             
         }
-
+        
     }];
-
 }
 
 - (void)updateTableData {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.commentsTableView reloadData];
     });
+}
+
+#pragma mark - Action
+
+- (IBAction)postCommentAction:(UIButton *)sender {
+    
+    NSDictionary *dictComment = @{@"username":self.usernameTextField.text, @"comment":self.commentBodyTextField.text};
+    
+    NSLog(@"%@", dictComment);
+    
+    [[SMDataService sharedInstance] postComment:dictComment toVideo:self.video onComplete:^(void) {
+        [self getAllComments];
+    }];
 }
 
 - (IBAction)doneAction:(UIButton *)sender {
@@ -98,5 +116,19 @@
     
     return cell;
 }
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    if ([textField isEqual:self.usernameTextField]) {
+        [self.commentBodyTextField becomeFirstResponder];
+    } else if ([textField isEqual:self.commentBodyTextField]) {
+        [textField resignFirstResponder];
+    }
+    
+    return YES;
+}
+
 
 @end

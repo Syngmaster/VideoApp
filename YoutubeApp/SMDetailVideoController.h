@@ -16,6 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UITableView *commentsTableView;
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *commentBodyTextField;
+
+- (IBAction)postCommentAction:(UIButton *)sender;
 
 - (IBAction)doneAction:(UIButton *)sender;
 

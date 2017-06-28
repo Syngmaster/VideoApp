@@ -242,17 +242,20 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="29.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5LD-Ld-3Vv">
                                                 <rect key="frame" x="0.0" y="34.5" width="335" height="29"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkW-8v-qRA">
                                                 <rect key="frame" x="0.0" y="68.5" width="335" height="29.5"/>
                                                 <state key="normal" title="Post comment"/>
+                                                <connections>
+                                                    <action selector="postCommentAction:" destination="FxJ-z3-rWg" eventType="touchUpInside" id="nbb-C4-j5E"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -290,9 +293,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="commentBodyTextField" destination="5LD-Ld-3Vv" id="eOh-F7-0yG"/>
                         <outlet property="commentsTableView" destination="bgg-p3-nhR" id="7SX-0i-LkB"/>
                         <outlet property="descriptionLabel" destination="AS0-3W-Ryj" id="RVl-A1-HJO"/>
                         <outlet property="titleLabel" destination="fek-ZP-5ua" id="WQQ-k2-VPg"/>
+                        <outlet property="usernameTextField" destination="T9X-Cf-9UE" id="akE-MQ-Gze"/>
                         <outlet property="webView" destination="jRL-Jy-Vzd" id="an6-Mk-HAC"/>
                     </connections>
                 </viewController>

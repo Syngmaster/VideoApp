@@ -11,12 +11,14 @@
 @class SMVideoModel;
 
 typedef void (^onComplete)(NSArray *dataArray, NSString *errorMessage);
+typedef void (^dataPosted)(void);
 
 @interface SMDataService : NSObject
 
 + (SMDataService *) sharedInstance;
-- (void) getVideos:(onComplete) completionHandler;
-- (void)postComment;
+
+- (void)getVideos:(onComplete) completionHandler;
 - (void)getAllCommentsOfVideo:(SMVideoModel *) video onComplete:(onComplete) completionHandler;
+- (void)postComment:(NSDictionary *) comment toVideo:(SMVideoModel *) video onComplete:(dataPosted) completionHandler;
 
 @end

@@ -40,8 +40,6 @@
         }
     }];
     
-    [[SMDataService sharedInstance] postComment];
-
 }
 
 
