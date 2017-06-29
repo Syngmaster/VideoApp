@@ -15,9 +15,7 @@
 @interface SMDetailVideoController () <UIWebViewDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
 @property (strong, nonatomic) NSArray *testUsername;
-@property (strong, nonatomic) NSArray *testComment;
 @property (strong, nonatomic) NSArray *commentsList;
-
 
 @end
 
@@ -32,6 +30,7 @@
     [self.webView loadHTMLString:self.video.videoIFrame baseURL:nil];
     
     self.commentsTableView.dataSource = self;
+    self.commentsTableView.delegate = self;
     self.usernameTextField.delegate = self;
     self.commentBodyTextField.delegate = self;
     
@@ -72,7 +71,11 @@
     
     [[SMDataService sharedInstance] postComment:dictComment toVideo:self.video onComplete:^(void) {
         [self getAllComments];
+
     }];
+    
+    self.usernameTextField.text = @"";
+    self.commentBodyTextField.text = @"";
 }
 
 - (IBAction)doneAction:(UIButton *)sender {
@@ -111,10 +114,25 @@
     }
     
     SMCommentModel *comment = [self.commentsList objectAtIndex:indexPath.row];
-    
     [cell configureCell:comment];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    SMCommentModel *comment = [self.commentsList objectAtIndex:indexPath.row];
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        NSMutableArray *tempArray = [NSMutableArray arrayWithArray:self.commentsList];
+        [tempArray removeObject:comment];
+        self.commentsList = tempArray;
+        [self updateTableData];
+        
+        [[SMDataService sharedInstance] deleteComment:comment fromVideo:self.video onComplete:nil];
+        
+    }
 }
 
 #pragma mark - UITextFieldDelegate

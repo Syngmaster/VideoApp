@@ -15,6 +15,7 @@
     if (self) {
         self.username = [dataDict objectForKey:@"username"];
         self.commentBody = [dataDict objectForKey:@"comment"];
+        self.commentID = [dataDict objectForKey:@"_id"];
     }
     
     return self;

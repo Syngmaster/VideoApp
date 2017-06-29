@@ -16,11 +16,12 @@
     
 }
 
+
 - (void)configureCell:(SMCommentModel *) comment {
     
     self.usernameLabel.text = comment.username;
     self.commentLabel.text = comment.commentBody;;
-    
+    self.comment = comment;
 }
 
 @end

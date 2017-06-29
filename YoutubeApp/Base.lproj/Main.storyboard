@@ -196,20 +196,11 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="327" height="20"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hf8-VF-9SC">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="307" height="20"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="327" height="20"/>
                                                                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDj-5i-eh9">
-                                                                            <rect key="frame" x="307" y="0.0" width="20" height="20"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="20" id="DYs-ap-cYU"/>
-                                                                            </constraints>
-                                                                            <state key="normal" title="x">
-                                                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                                            </state>
-                                                                        </button>
                                                                     </subviews>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20" id="DH7-26-FTT"/>

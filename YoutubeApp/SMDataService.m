@@ -13,10 +13,14 @@
 #define URL_BASE "http://localhost:6361/method"
 #define URL_VIDEOS "/video.getAll"
 #define URL_COMMENTS "/video.getComments="
+#define URL_POST_COMMENT "/video.postComment="
+#define URL_DELETE_COMMENT "/video.deleteComment="
+
+
 
 @implementation SMDataService
 
-+ (SMDataService *) sharedInstance {
++ (SMDataService *)sharedInstance {
     
     static SMDataService *sharedInstance = nil;
     
@@ -28,7 +32,7 @@
     return sharedInstance;
 }
 
-- (void) getVideos:(onComplete) completionHandler {
+- (void) getVideos:(onComplete)completionHandler {
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%s%s", URL_BASE, URL_VIDEOS]];
     NSURLSession *session = [NSURLSession sharedSession];
@@ -68,7 +72,7 @@
     
 }
 
-- (void)getAllCommentsOfVideo:(SMVideoModel *) video onComplete:(onComplete) completionHandler  {
+- (void)getAllCommentsOfVideo:(SMVideoModel *)video onComplete:(onComplete)completionHandler  {
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%s%s%@", URL_BASE, URL_COMMENTS, video.videoID]];
     
@@ -107,12 +111,12 @@
     
 }
 
-- (void)postComment:(NSDictionary *) comment toVideo:(SMVideoModel *) video onComplete:(dataPosted) completionHandler {
+- (void)postComment:(NSDictionary *)comment toVideo:(SMVideoModel *)video onComplete:(completionBlock)completionHandler {
     
     NSError *error;
     
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:6361/video.postComment=%@", video.videoID]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%s%s%@",URL_BASE,URL_POST_COMMENT, video.videoID]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
@@ -130,6 +134,17 @@
     }];
     
     [postDataTask resume];
+    
+}
+
+- (void)deleteComment:(SMCommentModel *)comment fromVideo:(SMVideoModel *)video onComplete:(completionBlock)completionHandler {
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%s%s%@&%@", URL_BASE, URL_DELETE_COMMENT, video.videoID, comment.commentID]];
+    NSURLSession *session = [NSURLSession sharedSession];
+
+    [[session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                
+    }] resume];
     
     
 }

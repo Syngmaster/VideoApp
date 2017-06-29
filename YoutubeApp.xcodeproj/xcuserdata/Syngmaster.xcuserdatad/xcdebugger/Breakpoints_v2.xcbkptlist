@@ -25,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "YoutubeApp/SMDetailVideoController.m"
-            timestampString = "520366170.459971"
+            filePath = "YoutubeApp/SMDataService.m"
+            timestampString = "520449794.350587"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "-postCommentAction:"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "-deleteComment:fromVideo:onComplete:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

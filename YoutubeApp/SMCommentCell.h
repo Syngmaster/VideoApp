@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
 
+@property (strong, nonatomic) SMCommentModel *comment;
+
 - (void)configureCell:(SMCommentModel *) comment;
 
 @end
