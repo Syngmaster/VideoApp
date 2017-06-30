@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *commentBody;
 @property (nonatomic, strong) NSString *commentID;
+@property (nonatomic, strong) NSString *commentDate;
 
 - (instancetype)initWithData:(NSDictionary *) dataDict;
 

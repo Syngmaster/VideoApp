@@ -20,6 +20,7 @@
 		DC21CC391EFEE85400BA8558 /* SMCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC381EFEE85400BA8558 /* SMCommentCell.m */; };
 		DC21CC3C1EFEEE8A00BA8558 /* SMCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC3B1EFEEE8A00BA8558 /* SMCustomView.m */; };
 		DC21CC3F1F02C86E00BA8558 /* SMCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC3E1F02C86E00BA8558 /* SMCommentModel.m */; };
+		DC21CC421F06A54000BA8558 /* SMCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21CC411F06A54000BA8558 /* SMCustomButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		DC21CC3B1EFEEE8A00BA8558 /* SMCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCustomView.m; sourceTree = "<group>"; };
 		DC21CC3D1F02C86E00BA8558 /* SMCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCommentModel.h; sourceTree = "<group>"; };
 		DC21CC3E1F02C86E00BA8558 /* SMCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCommentModel.m; sourceTree = "<group>"; };
+		DC21CC401F06A54000BA8558 /* SMCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCustomButton.h; sourceTree = "<group>"; };
+		DC21CC411F06A54000BA8558 /* SMCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCustomButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				DC21CC381EFEE85400BA8558 /* SMCommentCell.m */,
 				DC21CC3A1EFEEE8A00BA8558 /* SMCustomView.h */,
 				DC21CC3B1EFEEE8A00BA8558 /* SMCustomView.m */,
+				DC21CC401F06A54000BA8558 /* SMCustomButton.h */,
+				DC21CC411F06A54000BA8558 /* SMCustomButton.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				DC21CC2B1EFBD77200BA8558 /* SMDataService.m in Sources */,
 				DC21CC161EFBD74A00BA8558 /* AppDelegate.m in Sources */,
 				DC21CC321EFBE36A00BA8558 /* SMVideoModel.m in Sources */,
+				DC21CC421F06A54000BA8558 /* SMCustomButton.m in Sources */,
 				DC21CC391EFEE85400BA8558 /* SMCommentCell.m in Sources */,
 				DC21CC3C1EFEEE8A00BA8558 /* SMCustomView.m in Sources */,
 				DC21CC131EFBD74A00BA8558 /* main.m in Sources */,

@@ -16,6 +16,7 @@
         self.username = [dataDict objectForKey:@"username"];
         self.commentBody = [dataDict objectForKey:@"comment"];
         self.commentID = [dataDict objectForKey:@"_id"];
+        self.commentDate = [dataDict objectForKey:@"created_at"];
     }
     
     return self;

@@ -25,14 +25,14 @@
     [super viewDidLoad];
     
     self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+    self.tableView.dataSource = self;    
+    
 
     [[SMDataService sharedInstance] getVideos:^(NSArray *dataArray, NSString *errorMessage) {
         
         if (dataArray) {
-            NSLog(@"Array: %@", dataArray.debugDescription);
-            self.videoList = dataArray;
             
+            self.videoList = dataArray;
             [self updateTableData];
             
         } else if (errorMessage) {

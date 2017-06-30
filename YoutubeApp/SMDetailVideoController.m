@@ -34,6 +34,11 @@
     self.usernameTextField.delegate = self;
     self.commentBodyTextField.delegate = self;
     
+    // set the 
+    self.commentsTableView.rowHeight = UITableViewAutomaticDimension;
+    self.commentsTableView.estimatedRowHeight = 60;
+    self.commentsTableView.bounces = NO;
+    
     [self getAllComments];
     
     NSLog(@"%@",self.video.videoID);
@@ -67,15 +72,15 @@
     
     NSDictionary *dictComment = @{@"username":self.usernameTextField.text, @"comment":self.commentBodyTextField.text};
     
-    NSLog(@"%@", dictComment);
-    
-    [[SMDataService sharedInstance] postComment:dictComment toVideo:self.video onComplete:^(void) {
-        [self getAllComments];
-
-    }];
-    
     self.usernameTextField.text = @"";
     self.commentBodyTextField.text = @"";
+        
+    [[SMDataService sharedInstance] postComment:dictComment toVideo:self.video onComplete:^(void) {
+
+        [self getAllComments];
+    }];
+    
+
 }
 
 - (IBAction)doneAction:(UIButton *)sender {
